@@ -5,7 +5,12 @@ export class AppController {
   constructor() {}
 
   @Get()
-  getHello(): string {
-    return 'hello';
+  getHello(): object {
+    return {'hello':'world'};
+  }
+
+  @Get('hi')
+  getHi(): object {
+    return {'ping':'pong'};
   }
 }
